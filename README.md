@@ -29,6 +29,21 @@ You can run the site with Docker as follows:
 
     docker-compose up -d
 
+### macOS, with dependencies installed by the Makefile
+In the macOS, first install XCode Developer Tools (if not already installed):
+
+    xcode-select --install
+
+Depending on OS version, you may need to link the universal-darwin21 library; see details in the Makefile.
+
+Then install dependencies (first time only, or until "make distclean" is invoked)
+
+    make install
+
+Then tart jekyll, listening on localhost:4000 (and livereload on default port 35729)
+
+    make
+
 ## Theme
 This site uses a modified version of the [Legume Information System Jekyll theme](https://github.com/legumeinfo/jekyll-theme-legumeinfo).
 

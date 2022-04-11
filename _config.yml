@@ -21,21 +21,18 @@
 ## not sure what this is for
 # exclude_paths: ["news/index.html", "announcements/index.html"]
 
-title: "LIS: Legume Information System"
-subtitle: Information about legume traits for crop improvement
-logo: /assets/img/logo.png
-email: your-email@example.com
+title: "SoyBase"
+subtitle: Integrating Genetics and Genomics to Advance Soybean Research
+logo: /assets/img/sb_logo.png
+email: https://www.soybase.org/include/antispam.php?menu=1
 description: >- # this means to ignore newlines until "baseurl:"
   A collaborative, community resource to facilitate crop improvement by integrating
   genetic, genomic, and trait data across legume species.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: legumeinfo
-github_username: legumeinfo
-#newsletter: http://eepurl.com/cX_JjL
-
-# our Google Analytics ID
-google_analytics: "UA-49655154-1"
+twitter_username: soybasedatabase
+github_username: soybase
+newsletter: https://www.soybase.org/soybaselist/index.php
 
 # Set the LIS Datastore base URL here
 datastoreurl: https://data.legumeinfo.org
@@ -48,16 +45,18 @@ plugins:
 
 #### jekyll-datapage-generator config
 page_gen:
-  - data: taxon_list
-    template: taxon
-    dir: taxa
-    name: genus
+  - data: tools
+    template: tools
+    page_data_prefix: tools
+    dir: tools
+    name: url
     index_files: true
     debug: true
-  - data: taxon_list
-    template: collection
-    dir: collections
-    name: genus
+  - data: project_list
+    template: projects
+    page_data_prefix: projects
+    dir: projects
+    name: DataStoreID
     index_files: true
     debug: true
 
@@ -70,7 +69,7 @@ sass:
 style:
     link_color: '#0071B3'
     link_hover_color: '#018fe2'
-    primary_background: '#87a96b'
+    primary_background: '#817339'
     invert_navbar_text: true
 
 
